@@ -14,8 +14,8 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"doQumentation","applicationCategory":"EducationalApplication","operatingSystem":"Web, Docker, Raspberry Pi","description":"Open-source frontend for IBM Quantum documentation with live Jupyter code execution, simulator mode, and offline support.","url":"https://doqumentation.org","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.apache.org/licenses/LICENSE-2.0"}</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script><link rel="stylesheet" href="/assets/css/styles.09715444.css">
-<script src="/assets/js/runtime~main.035fa2de.js" defer="defer"></script>
-<script src="/assets/js/main.3135a041.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.90754e1b.js" defer="defer"></script>
+<script src="/assets/js/main.53ada7e9.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
 <svg style="display: none;"><defs>
@@ -26,7 +26,7 @@
 <p>Ada beberapa cara untuk membatasi waktu yang dihabiskan saat memproses dan menjalankan sebuah job:</p>
 <ul>
 <li class="">
-<p>Jalankan hanya sebanyak shots yang kamu butuhkan: Waktu kuantum yang digunakan sebuah job (dan oleh karena itu, biayanya) berbanding lurus dengan jumlah shots. Jadi, kamu bisa mengelola biaya dengan hanya menjalankan shots sebanyak yang diperlukan. Untuk job Estimator, presisi yang lebih rendah biasanya membutuhkan lebih banyak shots dan karenanya waktu eksekusi yang lebih lama.</p>
+<p>Jalankan hanya sebanyak shots yang Anda butuhkan: Waktu kuantum yang digunakan sebuah job (dan oleh karena itu, biayanya) berbanding lurus dengan jumlah shots. Jadi, Anda bisa mengelola biaya dengan hanya menjalankan shots sebanyak yang diperlukan. Untuk job Estimator, presisi yang lebih rendah biasanya membutuhkan lebih banyak shots dan karenanya waktu eksekusi yang lebih lama.</p>
 </li>
 <li class="">
 <p>Tetapkan batas waktu eksekusi: Kamu bisa membatasi berapa lama setiap job, batch, atau session berjalan. Untuk detailnya, lihat <a class="" href="/guides/max-execution-time">Maximum execution time for Qiskit Runtime workloads</a>.</p>
@@ -35,7 +35,7 @@
 <p>Gunakan hanya pengaturan yang diperlukan untuk error suppression dan error mitigation, karena nilai yang lebih tinggi dapat membuat job berjalan lebih lama. Lihat <a class="" href="/guides/runtime-options-overview">Introduction to options</a>, <a class="" href="/guides/error-mitigation-and-suppression-techniques">Configure error suppression</a>, dan <a class="" href="/guides/error-mitigation-and-suppression-techniques">Configure error mitigation</a> untuk detailnya.</p>
 </li>
 <li class="">
-<p>Jika kamu menjalankan beberapa job yang berisi Circuit yang sama (kemungkinan berparameter) dan menggunakan metode error mitigation yang membutuhkan noise model, seperti PEA dan PEC, pertimbangkan untuk menggunakan <code>NoiseLearner</code>. Dengan program pembantu ini, kamu bisa mempelajari noise model dari sebuah Circuit satu kali dan menggunakannya kembali di query Estimator berikutnya. Perlu diingat bahwa noise model bisa menjadi tidak relevan setelah jangka waktu tertentu, jadi ini hanya praktis jika tidak ada jeda panjang antar job (misalnya, dalam satu session). Lihat <a class="" href="/guides/noise-learning">Noise learning helper
+<p>Jika Anda menjalankan beberapa job yang berisi Circuit yang sama (kemungkinan berparameter) dan menggunakan metode error mitigation yang membutuhkan noise model, seperti PEA dan PEC, pertimbangkan untuk menggunakan <code>NoiseLearner</code>. Dengan program pembantu ini, Anda bisa mempelajari noise model dari sebuah Circuit satu kali dan menggunakannya kembali di query Estimator berikutnya. Perlu diingat bahwa noise model bisa menjadi tidak relevan setelah jangka waktu tertentu, jadi ini hanya praktis jika tidak ada jeda panjang antar job (misalnya, dalam satu session). Lihat <a class="" href="/guides/noise-learning">Noise learning helper
 </a> untuk detail lebih lanjut.</p>
 </li>
 </ul>
