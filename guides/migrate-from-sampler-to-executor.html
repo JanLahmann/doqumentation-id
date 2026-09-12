@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.6f03dc0d.js" defer="defer"></script>
-<script src="/assets/js/main.4756c3dc.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.7673a047.js" defer="defer"></script>
+<script src="/assets/js/main.ef329cf0.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/migrate-from-sampler-to-executor" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/migrate-from-sampler-to-executor" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -78,7 +78,7 @@ data.</p>
 <p><strong>Executor</strong> merupakan bagian dari <a class="" href="/guides/directed-execution-model">directed execution model</a>. Executor berbeda dari Sampler dalam banyak hal dan memiliki karakteristik berikut:</p>
 <ul>
 <li class="">
-<p>Executor tidak memiliki error suppression atau mitigasi bawaan. Sebagai gantinya, kamu menangkap maksud desainmu di sisi client
+<p>Executor tidak memiliki error suppression atau mitigasi bawaan. Sebagai gantinya, kamu menyatakan maksud desainmu di sisi client
 (dengan menggunakan anotasi circuit dan <em>samplex</em>), dan pembuatan varian circuit yang mahal
 dipindahkan ke sisi server.</p>
 </li>
@@ -226,7 +226,7 @@ untuk penjelasan lengkap.</p>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-5-update-options-as-necessary">Langkah 5. Perbarui opsi sesuai kebutuhan<a href="#step-5-update-options-as-necessary" class="hash-link" aria-label="Tautan langsung ke Langkah 5. Perbarui opsi sesuai kebutuhan" title="Tautan langsung ke Langkah 5. Perbarui opsi sesuai kebutuhan" translate="no">​</a></h3>
 <p>Ada lebih sedikit opsi yang tersedia untuk Executor dibandingkan Sampler, karena
 pilihan mitigasi error kini berada di anotasi dan samplex-mu, bukan di opsi.</p>
-<p>Ada juga perbedaan struktural dalam di mana pengaturan berada.</p>
+<p>Ada juga perbedaan struktural mengenai tempat pengaturan disimpan.</p>
 <ul>
 <li class="">
 <p>Dengan Sampler,
@@ -239,7 +239,7 @@ job dibentuk dan diproses ditetapkan di <a class="" href="/guides/executor-input
 <code>ExecutorOptions</code>.</p>
 </li>
 </ul>
-<p>Examples:</p>
+<p>Contoh:</p>
 <table><thead><tr><th>Sampler</th><th>Executor</th></tr></thead><tbody><tr><td><code>shots</code></td><td><code>QuantumProgram(shots=...)</code></td></tr><tr><td><code>meas_type</code></td><td><code>QuantumProgram(meas_level=...)</code></td></tr></tbody></table>
 <p><a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/options-models-executor-options" target="_blank" rel="noopener noreferrer" class=""><code>ExecutorOptions</code></a> hanya menyimpan pengaturan eksekusi dan environment tingkat rendah
 yang tidak mengubah struktur data yang dikembalikan. Ada tiga grup tingkat atas:</p>
@@ -268,7 +268,7 @@ yang tidak mengubah struktur data yang dikembalikan. Ada tiga grup tingkat atas:
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-7-change-how-you-access-results">Langkah 7. Ubah cara kamu mengakses hasil<a href="#step-7-change-how-you-access-results" class="hash-link" aria-label="Tautan langsung ke Langkah 7. Ubah cara kamu mengakses hasil" title="Tautan langsung ke Langkah 7. Ubah cara kamu mengakses hasil" translate="no">​</a></h3>
 <p>Di Executor, hasil berupa array NumPy, bukan objek <code>BitArray</code>.  Gunakan string nama sebagai indeks (<code>result[0][&quot;meas&quot;]</code>) dan dapatkan <code>np.ndarray</code> sebagai hasilnya. Kamu tidak perlu mengingat path atribut <code>.data.&lt;register&gt;</code>.</p>
 <p>Untuk memperbarui dari Sampler ke Executor, ubah <code>result[i].data.&lt;reg&gt; (BitArray)</code> menjadi <code>result[i][&quot;&lt;reg&gt;&quot;] (np.ndarray)</code>, lalu tulis ulang post-processing berbasis <code>get_counts</code> sebagai operasi NumPy.</p>
-<table><thead><tr><th>Tugas</th><th>Sampler</th><th>Executor</th></tr></thead><tbody><tr><td>Dapatkan data register</td><td><code>result[0].data.meas</code></td><td><code>result[0][&quot;meas&quot;]</code></td></tr><tr><td>Tipe data</td><td><code>BitArray</code></td><td><code>np.ndarray</code></td></tr><tr><td>Dictionary counts</td><td><code>result[0].data.meas.get_counts()</code></td><td>Proses array secara manual</td></tr><tr><td>Register ganda</td><td><code>result[0].data.&lt;name&gt;</code> per register</td><td><code>result[0][&quot;&lt;name&gt;&quot;]</code> per register</td></tr><tr><td>Bentuk array CircuitItem</td><td>-</td><td><code>(parameter_sets, shots, register_bits)</code></td></tr><tr><td>Bentuk array SamplexItem</td><td>-</td><td><code>(randomizations, parameter_sets, shots, register_bits)</code></td></tr><tr><td>Batalkan twirling pengukuran</td><td>Otomatis</td><td><code>result[i][&quot;measurement_flips.&lt;name&gt;&quot;]</code> + XOR</td></tr></tbody></table>
+<table><thead><tr><th>Tugas</th><th>Sampler</th><th>Executor</th></tr></thead><tbody><tr><td>Dapatkan data register</td><td><code>result[0].data.meas</code></td><td><code>result[0][&quot;meas&quot;]</code></td></tr><tr><td>Tipe data</td><td><code>BitArray</code></td><td><code>np.ndarray</code></td></tr><tr><td>Dictionary counts</td><td><code>result[0].data.meas.get_counts()</code></td><td>Proses array secara manual</td></tr><tr><td>Beberapa register</td><td><code>result[0].data.&lt;name&gt;</code> per register</td><td><code>result[0][&quot;&lt;name&gt;&quot;]</code> per register</td></tr><tr><td>Bentuk array CircuitItem</td><td>-</td><td><code>(parameter_sets, shots, register_bits)</code></td></tr><tr><td>Bentuk array SamplexItem</td><td>-</td><td><code>(randomizations, parameter_sets, shots, register_bits)</code></td></tr><tr><td>Batalkan twirling pengukuran</td><td>Otomatis</td><td><code>result[i][&quot;measurement_flips.&lt;name&gt;&quot;]</code> + XOR</td></tr></tbody></table>
 <div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path></svg></span>catatan</div><div class="admonitionContent_BuS1"><p><code>BitArray</code> milik Sampler menawarkan helper (<code>get_counts</code>, <code>slice_bits</code>, <code>slice_shots</code>, <code>expectation_values</code>, dan post-selection mask). Executor mengembalikan array NumPy mentah sehingga kamu bisa melakukan post-processing ini dengan operasi NumPy standar.</p></div></div>
 <span id="twirled-results"></span>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="step-8-handle-twirled-results-bit-flip-corrections">Langkah 8. Menangani hasil twirled (koreksi bit-flip)<a href="#step-8-handle-twirled-results-bit-flip-corrections" class="hash-link" aria-label="Tautan langsung ke Langkah 8. Menangani hasil twirled (koreksi bit-flip)" title="Tautan langsung ke Langkah 8. Menangani hasil twirled (koreksi bit-flip)" translate="no">​</a></h3>
@@ -289,7 +289,7 @@ Kamu perlu menerapkannya secara manual; tidak ada yang dikoreksi secara implisit
 <li class=""><a class="" href="/guides/get-started-with-executor">Panduan cepat Executor</a></li>
 <li class=""><a class="" href="/guides/executor-input-output">Input dan output Executor</a></li>
 <li class=""><a class="" href="/guides/executor-options">Opsi Executor</a></li>
-<li class=""><a class="" href="/guides/directed-execution-model">Model eksekusi terarah</a></li>
+<li class=""><a class="" href="/guides/directed-execution-model">Directed execution model</a></li>
 <li class=""><a class="" href="/guides/get-started-with-sampler">Panduan cepat Sampler</a></li>
 <li class=""><a class="" href="/guides/sampler-input-output">Input dan output Sampler</a></li>
 <li class=""><a href="https://qiskit.github.io/samplomatic" target="_blank" rel="noopener noreferrer" class="">Dokumentasi Samplomatic</a></li>
