@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.7b5b0b37.js" defer="defer"></script>
-<script src="/assets/js/main.82c2b340.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5fc3a2bf.js" defer="defer"></script>
+<script src="/assets/js/main.53ef04ff.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/algorithmiq-tem" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/algorithmiq-tem" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -38,10 +38,10 @@ nilai ekspektasi dari observable dengan memitigasi kesalahan akibat noise yang
 tak terhindarkan pada perangkat keras kuantum, dengan akurasi yang lebih tinggi dan efisiensi biaya yang lebih baik,
 menjadikannya pilihan yang sangat menarik bagi para peneliti kuantum maupun
 praktisi industri.</p>
-<p>Metode ini terdiri dari membangun tensor network yang merepresentasikan invers dari
+<p>Metode ini membangun tensor network yang merepresentasikan invers dari
 kanal noise global yang memengaruhi keadaan prosesor kuantum, kemudian
 menerapkan peta tersebut pada hasil pengukuran yang informationally complete yang diperoleh dari
-keadaan bising untuk mendapatkan estimator yang tidak bias untuk observable.</p>
+keadaan yang terkena noise untuk mendapatkan estimator yang tidak bias untuk observable.</p>
 <p>Sebagai keunggulan, TEM memanfaatkan pengukuran yang informationally complete untuk
 memberikan akses ke sejumlah besar nilai ekspektasi observable yang telah dimitigasi, dan memiliki
 overhead sampling yang optimal pada perangkat keras kuantum, seperti yang dijelaskan dalam Filippov et
@@ -67,7 +67,7 @@ risiko munculnya kesalahan tambahan akibat ketidaksempurnaan perangkat kuantum.<
 TEM secara efisien mengestimasi beberapa observable dengan data pengukuran yang sama
 dari komputer kuantum.</li>
 <li class=""><strong>Mitigasi kesalahan pengukuran</strong>: Qiskit Function TEM juga mencakup
-<a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.033154" target="_blank" rel="noopener noreferrer" class="">metode mitigasi kesalahan pengukuran yang dipatenkan</a>
+<a href="https://journals.aps.org/prresearch/abstract/10.1103/PhysRevResearch.5.033154" target="_blank" rel="noopener noreferrer" class="">metode mitigasi kesalahan pengukuran milik Algorithmiq</a>
 yang mampu secara signifikan mengurangi kesalahan readout setelah proses kalibrasi singkat.</li>
 <li class=""><strong>Akurasi</strong>: TEM secara signifikan meningkatkan akurasi dan keandalan
 simulasi kuantum digital, membuat algoritma kuantum lebih presisi dan
@@ -79,11 +79,11 @@ beberapa observable pada Circuit kuantum dengan overhead sampling yang minimal.
 Circuit diukur dengan positive operator-valued measure (IC-POVM) yang informationally complete,
 dan hasil pengukuran yang dikumpulkan diproses pada komputer klasik. Pengukuran ini digunakan
 untuk menerapkan metode tensor network dan membangun peta inversi noise. Fungsi ini menerapkan
-peta yang sepenuhnya membalik seluruh Circuit bising menggunakan tensor network untuk merepresentasikan
-lapisan-lapisan bising.</p>
+peta yang sepenuhnya membalik seluruh Circuit yang terkena noise menggunakan tensor network untuk merepresentasikan
+lapisan-lapisan yang terkena noise.</p>
 <p><img decoding="async" loading="lazy" alt="Skema TEM" src="/assets/images/tem_scheme-3b0ce8de48d658c8be50eca1107670ae.svg" title="Estimasi yang dimitigasi dari observable O melalui pasca-pemrosesan hasil pengukuran dari prosesor kuantum bising. U dan N menunjukkan operasi kuantum ideal dan peta noise terkait, yang secara umum dapat bersifat non-lokal (dan diperluas ke kotak abu-abu). D adalah tensor dari operator yang dual terhadap efek dalam pengukuran IC. Modul mitigasi noise M adalah tensor network yang dikontraksi secara efisien dari tengah ke luar. Iterasi pertama kontraksi direpresentasikan oleh garis ungu bertitik, yang kedua oleh garis putus-putus, dan yang ketiga oleh garis solid." width="985" height="562" class="img_ev3q"></p>
 <p>Setelah Circuit dikirimkan ke fungsi, Circuit tersebut ditranspilasi dan
-dioptimalkan untuk meminimalkan jumlah lapisan dengan Gate dua-Qubit (Gate yang lebih bising
+dioptimalkan untuk meminimalkan jumlah lapisan dengan Gate dua-Qubit (Gate yang lebih rentan noise
 pada perangkat kuantum). Noise yang memengaruhi lapisan-lapisan tersebut dipelajari melalui
 <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/noise-learner-noise-learner" target="_blank" rel="noopener noreferrer" class="">Qiskit Runtime</a>
 menggunakan model noise sparse Pauli-Lindblad seperti yang dijelaskan dalam E. van den Berg, Z.
