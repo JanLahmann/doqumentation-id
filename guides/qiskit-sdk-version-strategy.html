@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.9015b7f9.js" defer="defer"></script>
-<script src="/assets/js/main.02fb951d.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.40fccc5f.js" defer="defer"></script>
+<script src="/assets/js/main.e1cdd0bd.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qiskit-sdk-version-strategy" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qiskit-sdk-version-strategy" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -33,11 +33,11 @@ fitur baru dan perbaikan bug tanpa merusak kompatibilitas API, dan diterbitkan
 secara berkala (saat ini, kira-kira setiap tiga bulan) <strong>hanya</strong> untuk
 versi major saat ini. Versi patch memberikan perbaikan untuk bug yang ditemukan di
 versi minor terbaru dari setiap seri rilis yang aktif didukung (yaitu,
-versi major). Kita mendukung maksimal dua seri rilis sekaligus, yang hanya terjadi
+versi major). Kami mendukung maksimal dua seri rilis sekaligus, yang hanya terjadi
 selama periode tumpang tindih setelah rilis versi major baru,
 dijelaskan lebih detail di bawah ini.</p>
 <h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="release-schedule">Jadwal rilis<a href="#release-schedule" class="hash-link" aria-label="Tautan langsung ke Jadwal rilis" title="Tautan langsung ke Jadwal rilis" translate="no">​</a></h2>
-<p>Contoh kadensi rilis besar X:</p>
+<p>Contoh kadensi rilis major X:</p>
 <p><img decoding="async" loading="lazy" alt="Qiskit release schedule schema" src="/assets/images/release_schedule-1773ed2741facc7656f68e0351ed74ec.avif" width="1048" height="360" class="img_ev3q"></p>
 <p>Untuk jadwal rilis terkini, lihat <a href="https://github.com/Qiskit/qiskit/milestones" target="_blank" rel="noopener noreferrer" class="">daftar milestones</a> proyek GitHub Qiskit, yang selalu berisi rencana rilis saat ini.</p>
 <p>Dengan rilis versi major baru, versi major sebelumnya didukung
@@ -45,10 +45,10 @@ setidaknya enam bulan dengan hanya perbaikan bug, dan satu tahun untuk perbaikan
 waktu ini hanya rilis patch yang diterbitkan untuk versi major tersebut.
 Sebuah versi patch final diterbitkan saat dukungan dihentikan, dan rilis tersebut
 juga mendokumentasikan akhir dukungan untuk seri versi major itu. Jendela dukungan yang lebih lama
-diperlukan untuk versi major sebelumnya karena ini memberi kesempatan kepada pengguna downstream
-Qiskit dan penggunanya untuk memigrasikan kode mereka.
+diperlukan untuk versi major sebelumnya karena ini memberi kesempatan kepada proyek downstream yang memakai
+Qiskit beserta penggunanya untuk memigrasikan kode mereka.
 Library downstream yang
-bergantung pada Qiskit tidak boleh langsung menaikkan versi minimum Qiskit yang dibutuhkan ke versi
+bergantung pada Qiskit tidak boleh menaikkan versi minimum Qiskit yang dibutuhkan ke versi
 major baru segera setelah rilisnya karena basis pengguna library membutuhkan waktu
 untuk migrasi ke perubahan API baru. Dengan adanya jendela dukungan yang diperpanjang
 untuk versi major Qiskit sebelumnya, proyek downstream memiliki waktu untuk memastikan
@@ -112,7 +112,7 @@ kompatibel dengan <a href="https://peps.python.org/pep-0440/" target="_blank" re
 ini adalah release candidate dengan bentuk <code>X.Y.0rc1</code>. Rilis <code>rc</code>
 akan memiliki permukaan API yang sudah final dan digunakan untuk menguji rilis yang akan datang.</p>
 <p>Perlu diperhatikan bahwa ketika salah satu sufiks pre-release PEP440 (seperti <code>a</code>, <code>b</code>, atau <code>pre</code>)
-diterbitkan, tidak memiliki jaminan yang sama seperti rilis <code>rc</code>, dan hanya
+diterbitkan, rilis tersebut tidak memiliki jaminan yang sama seperti rilis <code>rc</code>, dan hanya
 merupakan rilis preview. API mungkin berubah antara pre-release ini
 dan rilis final dengan nomor versi tersebut. Misalnya, <code>X.0.0pre1</code> mungkin memiliki
 API yang berbeda dari <code>X.0.0</code> final.</p>
