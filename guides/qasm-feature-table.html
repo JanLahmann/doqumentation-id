@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.a054c2db.js" defer="defer"></script>
-<script src="/assets/js/main.41735c46.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e21c3bd3.js" defer="defer"></script>
+<script src="/assets/js/main.09c6bbdc.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qasm-feature-table" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -64,7 +64,7 @@ file <code>include</code> tidak relevan.</li>
 </ol>
 <span id="2"></span>
 <ol start="2">
-<li class="">Qiskit SDK mendukung parsing dan dumping file OpenQASM 3 dengan deklarasi <code>qubit</code> apa pun. Untuk
+<li class="">Qiskit SDK mendukung parsing dan ekspor file OpenQASM 3 dengan deklarasi <code>qubit</code> apa pun. Untuk
 eksekusi pada perangkat keras, hanya circuit yang didefinisikan dalam qubit perangkat keras (misalnya, <code>$0</code>) yang valid.
 Qiskit SDK secara otomatis menghasilkan output OpenQASM 3 dalam bentuk identifier qubit perangkat keras yang didukung
 jika circuit sudah di-transpile untuk Backend dengan informasi layout.</li>
@@ -90,7 +90,7 @@ Qiskit SDK. Lihat <a href="https://docs.quantum.ibm.com/api/qiskit/circuit_class
 <li class="">Qiskit SDK dapat merepresentasikan aliasing register untuk register quantum maupun klasikal, tetapi
 sangat tidak disarankan menggunakan aliasing register klasikal. Sebagian besar ekspresi pada register klasikal
 tidak bekerja dengan alias, dan register klasikal yang di-alias tidak didukung untuk
-eksekusi pada perangkat keras. Parser OpenQASM 3 Qiskit dapat menyelesaikan pernyataan alias <code>let</code> yang mengikat
+eksekusi pada perangkat keras. Parser OpenQASM 3 Qiskit dapat menguraikan (me-resolve) pernyataan alias <code>let</code> yang mengikat
 hasil penggabungan register.</li>
 </ol>
 <span id="6"></span>

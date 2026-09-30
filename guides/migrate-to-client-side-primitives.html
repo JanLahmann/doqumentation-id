@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.a054c2db.js" defer="defer"></script>
-<script src="/assets/js/main.41735c46.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e21c3bd3.js" defer="defer"></script>
+<script src="/assets/js/main.09c6bbdc.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/migrate-to-client-side-primitives" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/migrate-to-client-side-primitives" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -64,7 +64,7 @@ yang baru, dan tidak akan diperlukan perubahan kode:</p>
 <p>Signature <code>run()</code> dan format PUB.</p>
 </li>
 <li class="">
-<p>Pohon options (<code>options.twirling</code>, <code>options.resilience</code>, <code>options.default_shots</code>,
+<p>Pohon opsi (<code>options.twirling</code>, <code>options.resilience</code>, <code>options.default_shots</code>,
 dan sebagainya).</p>
 </li>
 <li class="">
@@ -158,7 +158,7 @@ sesuai dokumentasi.</p>
 </ul>
 <h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="cliffordize-the-circuit-for-efficient-local-simulation">Cliffordisasi circuit untuk simulasi lokal yang efisien<a href="#cliffordize-the-circuit-for-efficient-local-simulation" class="hash-link" aria-label="Tautan langsung ke Cliffordisasi circuit untuk simulasi lokal yang efisien" title="Tautan langsung ke Cliffordisasi circuit untuk simulasi lokal yang efisien" translate="no">​</a></h3>
 <p>Fake backend menggunakan simulator statevector (noisy), yang biayanya tumbuh secara eksponensial seiring dengan
-jumlah qubit dan depth. Karena itu, circuit workload yang realistis bisa hang atau menghabiskan memori. Karena
+jumlah qubit dan depth. Akibatnya, circuit workload yang realistis bisa hang atau menghabiskan memori. Karena
 pengujian lokal hanya perlu menjalankan jalur opsi (bukan mereproduksi hasil fisik),
 kurangi circuit menjadi circuit Clifford terlebih dahulu dengan
 <a href="https://docs.quantum.ibm.com/api/qiskit-ibm-runtime/transpiler-passes-convert-isa-to-clifford" target="_blank" rel="noopener noreferrer" class=""><code>ConvertISAToClifford</code></a>,
