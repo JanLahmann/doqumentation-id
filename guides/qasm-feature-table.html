@@ -14,8 +14,8 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV" crossorigin="anonymous">
 <script src="https://unpkg.com/thebelab@0.4.0/lib/index.js" async></script>
 <script src="https://cloud.umami.is/script.js" defer="defer" data-website-id="97f347ac-e7ba-4be3-b26f-ab4b328bdbf2" data-domains="doqumentation.org,de.doqumentation.org,es.doqumentation.org,uk.doqumentation.org,fr.doqumentation.org,it.doqumentation.org,pt.doqumentation.org,ja.doqumentation.org,tl.doqumentation.org,ar.doqumentation.org,he.doqumentation.org,ms.doqumentation.org,id.doqumentation.org,th.doqumentation.org,ko.doqumentation.org,pl.doqumentation.org,ro.doqumentation.org,cs.doqumentation.org"></script><link rel="stylesheet" href="/assets/css/styles.d115d309.css">
-<script src="/assets/js/runtime~main.dbbbb4c5.js" defer="defer"></script>
-<script src="/assets/js/main.346f07d3.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.5461b5e8.js" defer="defer"></script>
+<script src="/assets/js/main.40d48179.js" defer="defer"></script>
 <link data-rh-hreflang rel="alternate" hreflang="en" href="https://doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="de" href="https://de.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="es" href="https://es.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="fr" href="https://fr.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="it" href="https://it.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="pt" href="https://pt.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ja" href="https://ja.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="fil" href="https://tl.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ar" href="https://ar.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="he" href="https://he.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ms" href="https://ms.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="id" href="https://id.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="th" href="https://th.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ko" href="https://ko.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="pl" href="https://pl.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="ro" href="https://ro.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="uk" href="https://uk.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="cs" href="https://cs.doqumentation.org/guides/qasm-feature-table" /><link data-rh-hreflang rel="alternate" hreflang="x-default" href="https://doqumentation.org/guides/qasm-feature-table" /></head>
 <body>
 <svg style="display: none;"><defs>
@@ -87,16 +87,16 @@ Qiskit SDK. Lihat <a href="https://docs.quantum.ibm.com/api/qiskit/circuit_class
 </ol>
 <span id="5"></span>
 <ol start="5">
-<li class="">Qiskit SDK dapat merepresentasikan aliasing register untuk register quantum maupun klasikal, tetapi
-sangat tidak disarankan menggunakan aliasing register klasikal. Sebagian besar ekspresi pada register klasikal
-tidak bekerja dengan alias, dan register klasikal yang di-alias tidak didukung untuk
+<li class="">Qiskit SDK dapat merepresentasikan aliasing register untuk register quantum maupun klasik, tetapi
+sangat tidak disarankan menggunakan aliasing register klasik. Sebagian besar ekspresi pada register klasik
+tidak bekerja dengan alias, dan register klasik yang di-alias tidak didukung untuk
 eksekusi pada perangkat keras. Parser OpenQASM 3 Qiskit dapat menguraikan (me-resolve) pernyataan alias <code>let</code> yang mengikat
 hasil penggabungan register.</li>
 </ol>
 <span id="6"></span>
 <ol start="6">
 <li class="">Qiskit SDK mendukung penundaan eksplisit via <code>QuantumCircuit.delay</code>, dan kotak circuit
-(<code>QuantumCircuit.box</code>) juga bisa memiliki durasi eksplisit. Durasi-durasi ini dapat mencakup ekspresi klasikal
+(<code>QuantumCircuit.box</code>) juga bisa memiliki durasi eksplisit. Durasi-durasi ini dapat mencakup ekspresi klasik
 dari variabel <code>stretch</code>. Qiskit SDK (per Juli 2025 melalui <code>qiskit-qasm3-import</code>
 v0.6.0) tidak mendukung parsing deklarasi bertipe <code>duration</code> atau <code>stretch</code> dari
 file OpenQASM 3. Perangkat keras memiliki dukungan terbatas untuk durasi yang mencakup <code>stretch</code>.</li>
@@ -119,7 +119,7 @@ di perangkat keras.</li>
 </ol>
 <span id="9"></span>
 <ol start="9">
-<li class="">Qiskit SDK mendukung deklarasi tipe klasikal apa pun yang didukung sebagai variabel <code>input</code> pada circuit.
+<li class="">Qiskit SDK mendukung deklarasi tipe klasik apa pun yang didukung sebagai variabel <code>input</code> pada circuit.
 Variabel-variabel tersebut saat ini tidak memenuhi syarat untuk eksekusi di perangkat keras, dan tidak dapat dimuat oleh
 importer OpenQASM 3 Qiskit. Objek <code>Parameter</code> yang tidak terikat yang ada di <code>QuantumCircuit</code> diekspor sebagai variabel <code>input float[64]</code>. Opsi konfigurasi runtime tertentu dapat memungkinkan eksekusi circuit tersebut di beberapa backend.</li>
 </ol>
